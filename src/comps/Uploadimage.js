@@ -1,6 +1,7 @@
 import React,{useState} from "react";
+import Progressbar from './Progressbar';
 
-export const Uploadimage = () => {
+const Uploadimage = () => {
 
     const [file,setFile]=useState(null);
     const [error, setError]=useState(null);
@@ -24,6 +25,9 @@ export const Uploadimage = () => {
       <input type="file" onChange={fileChangeHandler}/>
       {file && <div>{file.name}</div>}
       {error && <div style={{color:"red"}}>{error}</div>}
+      {file && <Progressbar file={file} setFile={setFile}/>}
     </div>
   );
 };
+
+export default Uploadimage;

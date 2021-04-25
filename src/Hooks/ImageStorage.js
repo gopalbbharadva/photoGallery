@@ -1,15 +1,18 @@
 import { useState, useEffect } from "react";
-import { storageRef } from "../Firebase/firebaseConfig";
+import { storageRef, timeStamp } from "../Firebase/firebaseConfig";
+import { firestoreRef } from "../Firebase/firebaseConfig";
 
-const imageStorage = (file) => {
+const ImageStorage = (file) => {
   const [progress, setProgress] = useState(0);
   const [error, setError] = useState(null);
   const [url, setUrl] = useState(null);
 
   useEffect(() => {
     const imageRef = storageRef.ref(file.name);
+    const imageurlRef = firestoreRef.collection("Images");
+
     imageRef.put(file).on(
-      "sate_changed",
+      "state_changed",
       (snap) => {
         const percent = (snap.bytesTransferred / snap.totalBytes) * 100;
         setProgress(percent);
@@ -19,6 +22,8 @@ const imageStorage = (file) => {
       },
       async () => {
         const url = await imageRef.getDownloadURL();
+        const createdAt = timeStamp();
+        imageurlRef.add({ url, createdAt });
         setUrl(url);
       }
     );
@@ -27,4 +32,4 @@ const imageStorage = (file) => {
   return { progress, error, url };
 };
 
-export default imageStorage;
+export default ImageStorage;
