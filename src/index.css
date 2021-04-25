@@ -59,14 +59,14 @@ form{
 }
 
 /* image grid styles */
-.image-grid{
+.img-grid{
   margin-top: 1rem;
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 1rem 2rem;
+  gap: 40px;
 }
-.image-wrap{
+.img-wrap{
+  border: 1px solid black;
   overflow: hidden;
   height: 0;
   padding: 50% 0;
@@ -74,13 +74,30 @@ form{
   opacity: 0.8;
 }
 
-.image-wrap img{
+.img-wrap img{
   min-width: 100%;
   min-height: 100%;
   max-width: 150%;
-  position: absolute;
+  position: absolute; 
   top: 0;
   left: 0;
 }
 
 /* modal styles */
+.main-modal{
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background:rgba(0, 0, 0, 0.5);
+}
+
+.main-modal img{
+  margin: 60px auto;
+  max-height: 80%;
+  max-width: 60%;
+  display: block;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
+  border: 2px solid black;
+}
