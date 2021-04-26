@@ -12,7 +12,7 @@ const ImageModal = ({ selectedImage, selectedNewImage }) => {
       animate={{opacity:1}}
     >
       <motion.img src={selectedImage} alt="update div" 
-      initial={{y:"-100vh"}}
+      initial={{y:"-10vh"}}
       animate={{y:"0"}}
        />
     </motion.div>
