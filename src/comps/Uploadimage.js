@@ -10,6 +10,7 @@ const Uploadimage = () => {
 
   const fileChangeHandler = (e) => {
     const selectedFile = e.target.files[0];
+    console.log(e.target.files)
     const fileTypes = ["image/png", "image/jpeg"];
     if (selectedFile && fileTypes.includes(selectedFile.type)) {
       setFile(selectedFile);

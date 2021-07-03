@@ -1,0 +1,8 @@
+->for uploading an image to firebse storage we will use useState and useEffect hooks.
+->hooks are chunk of a code just like a function which perform soem task and return some useful values.
+->in photo gallery: we will use hooks for uploading image to firebase storage and get the url of image,error,progress.
+
+first of all we need to make reference for uploading image to firebase storage default bcucket.
+
+after that by using put() method upload image.
+

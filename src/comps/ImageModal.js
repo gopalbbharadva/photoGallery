@@ -5,9 +5,9 @@ const ImageModal = ({ selectedImage, selectedNewImage }) => {
   const modalHandler = (e) => {
     if (e.target.classList.contains("main-modal")) 
     selectedNewImage(null);
-  };
+  };    
   return (
-    <motion.div className="main-modal" onClick={modalHandler}
+    <div className="main-modal" onClick={modalHandler}
       initial={{opacity:0}}
       animate={{opacity:1}}
     >
@@ -15,7 +15,7 @@ const ImageModal = ({ selectedImage, selectedNewImage }) => {
       initial={{y:"-10vh"}}
       animate={{y:"0"}}
        />
-    </motion.div>
+    </div>
   );
 };
 

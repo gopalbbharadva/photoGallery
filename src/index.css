@@ -1,86 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
 
-:root{
-  --primary: #818CF8;
+:root {
+  --primary: #818cf8;
   --secondary: #4e4e4e;
   --error: #ff4a4a;
 }
 
 /* base styles & title */
-body{
-  background-color: #FFFBEB;
+body {
+  background-color: #fffbeb;
   padding: 0;
   margin: 0;
   font-family: "Noto Serif";
   color: var(--secondary);
 }
-.App{
+.App {
   max-width: 960px;
   margin: 0 auto;
 }
-.main{
+.main {
   flex-direction: column;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.title{
+.title {
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   padding: 1rem;
   background-color: var(--primary);
   max-height: 40%;
 }
-.title h1{
+.title h1 {
   color: white;
   font-size: 1.2rem;
   letter-spacing: 2px;
   font-weight: normal;
 }
-.title h2, .title p{
+.title h2,
+.title p {
   text-align: center;
 }
-.title h2{
+.title h2 {
   margin-top: 30px;
   font-size: 2.4rem;
   color: white;
 }
 
 /* upload form styles */
-input[type=file]
-{
-  display: none;  
+input[type="file"] {
+  display: none;
 }
-.icon{
+.icon {
   margin-top: 1rem;
-  color: var(--secondary) ;
+  color: var(--secondary);
   font-size: 2.3rem;
   cursor: pointer;
 }
-.icon:hover{
+.icon:hover {
   color: var(--primary);
 }
-form{
+form {
   text-align: center;
 }
 /* progress bar styles */
-.progress-bar{
+.progress-bar {
   height: 0.5rem;
-  background-Color: var(--primary);
+  background-color: var(--primary);
 }
 
 /* image grid styles */
-.img-grid{
+.img-grid {
   padding: 1rem;
   border-left: 3px solid var(--primary);
   border-right: 3px solid var(--primary);
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
-.img-wrap{
+.img-wrap {
   border: none;
   border-radius: 1rem;
   overflow: hidden;
@@ -90,30 +90,29 @@ form{
   opacity: 0.8;
 }
 
-.img-wrap img{
+.img-wrap img {
   min-width: 100%;
   min-height: 100%;
   max-width: 150%;
-  position: absolute; 
+  position: absolute;
   top: 0;
   left: 0;
 }
 
 /* modal styles */
-.main-modal{
+.main-modal {
   top: 0;
   left: 0;
   position: fixed;
   width: 100%;
   height: 100%;
-  background:rgba(139, 150, 143, 0.5);
+  background: rgba(139, 150, 143, 0.5);
 }
 
-.main-modal img{
+.main-modal img {
   margin: 60px auto;
   max-height: 80%;
   max-width: 60%;
   display: block;
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
-  
 }

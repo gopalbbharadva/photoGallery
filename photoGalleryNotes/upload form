@@ -1,0 +1,12 @@
+first make comonent for upload form.
+
+make function of changing event of input typ=file.
+
+in that function 
+->get the file data.
+->get file data on changing file using usestat();
+->show file data iffiel selected.
+->allow particular type of fle not pdf,word, or video file.
+->print for error msges if file/correct from file not selected.
+->print filename if selected file is in correct from.
+

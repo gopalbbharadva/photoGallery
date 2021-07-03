@@ -1,0 +1,4 @@
+->Now we added the urls of image to firebase firestore.
+->so we will retrieve it in image grid component.
+->so the logic of fetching image urls from firestore will be kept in another custom hook.
+->that hook will take Collection as argument and then we wil fetch the documents.
